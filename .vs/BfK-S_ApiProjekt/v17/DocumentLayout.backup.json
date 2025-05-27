@@ -1,0 +1,104 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\de64609\\source\\repos\\BfK-S_ApiProjekt\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FB47CEB0-A9B7-4B2A-A52D-E80C7CA683FE}|BfK-S_ApiProjekt.csproj|c:\\users\\de64609\\source\\repos\\bfk-s_apiprojekt\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB47CEB0-A9B7-4B2A-A52D-E80C7CA683FE}|BfK-S_ApiProjekt.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB47CEB0-A9B7-4B2A-A52D-E80C7CA683FE}|BfK-S_ApiProjekt.csproj|c:\\users\\de64609\\source\\repos\\bfk-s_apiprojekt\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB47CEB0-A9B7-4B2A-A52D-E80C7CA683FE}|BfK-S_ApiProjekt.csproj|solutionrelative:assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB47CEB0-A9B7-4B2A-A52D-E80C7CA683FE}|BfK-S_ApiProjekt.csproj|c:\\users\\de64609\\source\\repos\\bfk-s_apiprojekt\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{FB47CEB0-A9B7-4B2A-A52D-E80C7CA683FE}|BfK-S_ApiProjekt.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB47CEB0-A9B7-4B2A-A52D-E80C7CA683FE}|BfK-S_ApiProjekt.csproj|c:\\users\\de64609\\source\\repos\\bfk-s_apiprojekt\\flashcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB47CEB0-A9B7-4B2A-A52D-E80C7CA683FE}|BfK-S_ApiProjekt.csproj|solutionrelative:flashcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB47CEB0-A9B7-4B2A-A52D-E80C7CA683FE}|BfK-S_ApiProjekt.csproj|c:\\users\\de64609\\source\\repos\\bfk-s_apiprojekt\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB47CEB0-A9B7-4B2A-A52D-E80C7CA683FE}|BfK-S_ApiProjekt.csproj|solutionrelative:app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Flashcard.cs",
+              "DocumentMoniker": "C:\\Users\\de64609\\source\\repos\\BfK-S_ApiProjekt\\Flashcard.cs",
+              "RelativeDocumentMoniker": "Flashcard.cs",
+              "ToolTip": "C:\\Users\\de64609\\source\\repos\\BfK-S_ApiProjekt\\Flashcard.cs",
+              "RelativeToolTip": "Flashcard.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBgAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T08:21:33.174Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\de64609\\source\\repos\\BfK-S_ApiProjekt\\App.xaml.cs",
+              "RelativeDocumentMoniker": "App.xaml.cs",
+              "ToolTip": "C:\\Users\\de64609\\source\\repos\\BfK-S_ApiProjekt\\App.xaml.cs",
+              "RelativeToolTip": "App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T08:20:25.177Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\de64609\\source\\repos\\BfK-S_ApiProjekt\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\de64609\\source\\repos\\BfK-S_ApiProjekt\\MainWindow.xaml.cs",
+              "RelativeToolTip": "MainWindow.xaml.cs",
+              "ViewState": "AgIAAEAAAAAA13w0OxIIwF4AAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T08:05:03.569Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AssemblyInfo.cs",
+              "DocumentMoniker": "C:\\Users\\de64609\\source\\repos\\BfK-S_ApiProjekt\\AssemblyInfo.cs",
+              "RelativeDocumentMoniker": "AssemblyInfo.cs",
+              "ToolTip": "C:\\Users\\de64609\\source\\repos\\BfK-S_ApiProjekt\\AssemblyInfo.cs",
+              "RelativeToolTip": "AssemblyInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T08:06:23.83Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\de64609\\source\\repos\\BfK-S_ApiProjekt\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "MainWindow.xaml",
+              "ToolTip": "C:\\Users\\de64609\\source\\repos\\BfK-S_ApiProjekt\\MainWindow.xaml",
+              "RelativeToolTip": "MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-20T08:05:06.45Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
