@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\de64609\\source\\repos\\BfK-S_ApiProjekt\\AI-Flashcards\\BfK-S_ApiProjekt.csproj": {}
+    "C:\\Users\\ynayn\\Documents\\Schule\\BfK-S\\Projekte\\Datenbank-Projekt\\AI-Flashcards\\BfK-S_ApiProjekt.csproj": {}
   },
   "projects": {
-    "C:\\Users\\de64609\\source\\repos\\BfK-S_ApiProjekt\\AI-Flashcards\\BfK-S_ApiProjekt.csproj": {
+    "C:\\Users\\ynayn\\Documents\\Schule\\BfK-S\\Projekte\\Datenbank-Projekt\\AI-Flashcards\\BfK-S_ApiProjekt.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\de64609\\source\\repos\\BfK-S_ApiProjekt\\AI-Flashcards\\BfK-S_ApiProjekt.csproj",
+        "projectUniqueName": "C:\\Users\\ynayn\\Documents\\Schule\\BfK-S\\Projekte\\Datenbank-Projekt\\AI-Flashcards\\BfK-S_ApiProjekt.csproj",
         "projectName": "BfK-S_ApiProjekt",
-        "projectPath": "C:\\Users\\de64609\\source\\repos\\BfK-S_ApiProjekt\\AI-Flashcards\\BfK-S_ApiProjekt.csproj",
-        "packagesPath": "C:\\Users\\de64609\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\de64609\\source\\repos\\BfK-S_ApiProjekt\\AI-Flashcards\\obj\\",
+        "projectPath": "C:\\Users\\ynayn\\Documents\\Schule\\BfK-S\\Projekte\\Datenbank-Projekt\\AI-Flashcards\\BfK-S_ApiProjekt.csproj",
+        "packagesPath": "C:\\Users\\ynayn\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ynayn\\Documents\\Schule\\BfK-S\\Projekte\\Datenbank-Projekt\\AI-Flashcards\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\de64609\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\ynayn\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -38,13 +34,7 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.300"
+        }
       },
       "frameworks": {
         "net7.0-windows7.0": {
@@ -74,7 +64,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,0 +1,11 @@
+TODO:
+
+- UI, (Aufbau, anschließen)
+- Anschluss an Datenbank (Aufbau Datenbank)
+- Welche Funktionen soll die App haben?
+	- Aktuell: Thema + Anzahl Karten = KI generiert Fragen + Antwort
+	- Ideen:
+		- Vollständig eigene Karten erstellen
+		- Frage stellen und KI generiert Antwort (Antworten evt. selbst änderbar)
+		- Karten zu Kategorie Zusammenfassen
+		- Visuelle Darstellung aller Daten in der UI (delete Button + evt. mit edit button)
