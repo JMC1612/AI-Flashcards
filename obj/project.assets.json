@@ -61,11 +61,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\de64609\\source\\repos\\BfK-S_ApiProjekt\\BfK-S_ApiProjekt.csproj",
+      "projectUniqueName": "C:\\Users\\de64609\\source\\repos\\BfK-S_ApiProjekt\\AI-Flashcards\\BfK-S_ApiProjekt.csproj",
       "projectName": "BfK-S_ApiProjekt",
-      "projectPath": "C:\\Users\\de64609\\source\\repos\\BfK-S_ApiProjekt\\BfK-S_ApiProjekt.csproj",
+      "projectPath": "C:\\Users\\de64609\\source\\repos\\BfK-S_ApiProjekt\\AI-Flashcards\\BfK-S_ApiProjekt.csproj",
       "packagesPath": "C:\\Users\\de64609\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\de64609\\source\\repos\\BfK-S_ApiProjekt\\obj\\",
+      "outputPath": "C:\\Users\\de64609\\source\\repos\\BfK-S_ApiProjekt\\AI-Flashcards\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

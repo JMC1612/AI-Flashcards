@@ -7,6 +7,7 @@ using System.Net.Http.Headers;
 using System.Runtime.InteropServices.JavaScript;
 using System.Text;
 using System.Text.Json;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -19,6 +20,10 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.VisualBasic;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using JsonRequiredAttribute = Newtonsoft.Json.JsonRequiredAttribute;
+using JsonSerializer = System.Text.Json.JsonSerializer;
 
 namespace BfK_S_ApiProjekt
 {
@@ -75,7 +80,7 @@ namespace BfK_S_ApiProjekt
                     {
                         new
                         {
-                            text = $@"Generiere 5 Karteikarten über das Thema ""{InputTextbox.Text}"" in diesem Format:
+                            text = $@"Generiere {AmmountTextBox.Text} Karteikarten über das Thema ""{InputTextbox.Text}"" in diesem Format:
                             ;front_text: TEXT ;back_text: TEXT
                             antworte ab sofort nur in diesem Format ohne jemals davon abzuweichen.",
 
@@ -85,7 +90,7 @@ namespace BfK_S_ApiProjekt
             }
             };
 
-            var json = JsonSerializer.Serialize(requestBody);
+            var json = System.Text.Json.JsonSerializer.Serialize(requestBody);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
 
             var response = await App.internetClient.PostAsync(url, content);
@@ -93,8 +98,11 @@ namespace BfK_S_ApiProjekt
             if (response.IsSuccessStatusCode)
             {
                 var responseJson = await response.Content.ReadAsStringAsync();
+                var responseJsonDocument = JsonDocument.Parse(responseJson);
 
-                OutputTextbox.Text = responseJson.ToString();
+                string geminiTxt = Convert.ToString(responseJsonDocument.RootElement.GetProperty("candidates")[0].GetProperty("content").GetProperty("parts")[0].GetProperty("text"));
+
+                OutputTextbox.Text = geminiTxt;
             }
             else
             {
@@ -103,10 +111,8 @@ namespace BfK_S_ApiProjekt
         }
     }
 
-    public class GemeniRequest
+    public class GeminiResponse
     {
-        public GemeniRequest()
-        {
-        }
+        public string text { get; set; } = "";
     }
 }
