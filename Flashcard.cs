@@ -24,7 +24,7 @@ namespace BfK_S_ApiProjekt
             {
                 id = 0;
             }
-
+            App.AllFlashcards.Add(this);
         }
     }
 }

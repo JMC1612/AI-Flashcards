@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices.JavaScript;
 using System.Text;
 using System.Text.Json;
@@ -39,30 +40,9 @@ namespace BfK_S_ApiProjekt
             InitializeComponent();
         }
 
-        private void UpdateLernkarten()
-        {
-            string outoutTxt = "";
-
-            foreach(Flashcard lk in App.AllFlashcards)
-            {
-                outoutTxt += $"ID: {lk.id}\n";
-                outoutTxt += $"ID: {lk.textFront}\n";
-                outoutTxt += $"ID: {lk.textBack}\n";
-                outoutTxt += "\n";
-            }
-
-            OutputTextbox.Text = outoutTxt;
-        }
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            var test = new Flashcard("vorne", "hinten");
-            App.AllFlashcards.Add(test);
-
             AiCall();
-
-
-            UpdateLernkarten();
         }
 
         private async void AiCall()
@@ -80,8 +60,11 @@ namespace BfK_S_ApiProjekt
                     {
                         new
                         {
-                            text = $@"Generiere {AmmountTextBox.Text} Karteikarten über das Thema ""{InputTextbox.Text}"" in diesem Format:
+                            text = $@"Generiere {AmmountTextBox.Text} Karteikarten über das Thema ""{InputTextbox.Text}"" in exakt diesem Format
+
                             ;front_text: TEXT ;back_text: TEXT
+
+                            beachte hierbei, dass jede Karteikarte in einer eigenen Zeile steht und ;front_text:  sowohl als auch ;back_text: beinhaltet.
                             antworte ab sofort nur in diesem Format ohne jemals davon abzuweichen.",
 
                         }
@@ -102,17 +85,55 @@ namespace BfK_S_ApiProjekt
 
                 string geminiTxt = Convert.ToString(responseJsonDocument.RootElement.GetProperty("candidates")[0].GetProperty("content").GetProperty("parts")[0].GetProperty("text"));
 
-                OutputTextbox.Text = geminiTxt;
+                GenerateGeminiFlashcards(geminiTxt);
+                
+                UpdateFlashcardDisplay();
             }
             else
             {
                 OutputTextbox.Text = $"Fehler: {response.StatusCode} | " + await response.Content.ReadAsStringAsync();
             }
         }
-    }
 
-    public class GeminiResponse
-    {
-        public string text { get; set; } = "";
+        // macht aus dem gemini generierten text Lernkarten :)
+        public List<Flashcard> GenerateGeminiFlashcards(string geminiString)
+        {
+            List<Flashcard> geminiFlashcardList = new List<Flashcard>();
+
+            var lines = geminiString.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
+
+            foreach (var line in lines)
+            {
+                if (string.IsNullOrWhiteSpace(line)) { continue; }
+                
+
+                    string[] cardTextParts = line.Trim().Split(new[] { ";front_text:", ";back_text:" }, StringSplitOptions.RemoveEmptyEntries);
+                    if (cardTextParts.Length == 2)
+                    {
+                        geminiFlashcardList.Add(new Flashcard(cardTextParts[0].Trim(), cardTextParts[1].Trim()));
+                    }
+                
+            }
+
+            Debug.WriteLine("Generated " + geminiFlashcardList.Count + " gemini flashcards");
+            return geminiFlashcardList;
+        }
+
+        public void UpdateFlashcardDisplay() //solange wir kein UI haben, einf als Text anzeigen
+        {
+            string testDisplaytext = "";
+
+            foreach (var card in App.AllFlashcards)
+            {
+                testDisplaytext += $"ID: {card.id}\n";
+                testDisplaytext += $"Front: {card.textFront}\n";
+                testDisplaytext += $"Back: {card.textBack}\n";
+                testDisplaytext += "";
+            }
+
+            OutputTextbox.Text = testDisplaytext;
+            Debug.Write(testDisplaytext);
+        }
+
     }
 }

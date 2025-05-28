@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\ynayn\Documents\Schule\BfK-S\Projekte\Datenbank-Projekt\AI-Flashcards\obj\Debug\net7.0-windows\
+C:\Users\de64609\source\repos\BfK-S_ApiProjekt\AI-Flashcards\obj\Debug\net7.0-windows\
 BfK_S_ApiProjekt
 none
 false
-TRACE;DEBUG;NET;NET7_0;NETCOREAPP
-C:\Users\ynayn\Documents\Schule\BfK-S\Projekte\Datenbank-Projekt\AI-Flashcards\App.xaml
+TRACE;DEBUG;NET;NET7_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
+C:\Users\de64609\source\repos\BfK-S_ApiProjekt\AI-Flashcards\App.xaml
 11407045341
 
 6-1802031342
-1992043827467
+199793372540
 MainWindow.xaml;
 
-False
+True
 
