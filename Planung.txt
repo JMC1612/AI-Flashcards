@@ -1,4 +1,4 @@
-TODO:
+	TODO:
 
 - UI, (Aufbau, anschließen)
 - Anschluss an Datenbank (Aufbau Datenbank)
@@ -9,3 +9,41 @@ TODO:
 		- Frage stellen und KI generiert Antwort (Antworten evt. selbst änderbar)
 		- Karten zu Kategorie Zusammenfassen
 		- Visuelle Darstellung aller Daten in der UI (delete Button + evt. mit edit button)
+
+
+
+
+
+
+
+
+-----------------------------------------------------------------------------------------------
+
+Item: Flashcard: Front, Back(, Thema)
+
+Model: List(Flashcards) [UI] -> Verbunden mit Datenbank
+
+Class: EditFlashard:
+	AddFlashcard
+	DeleteFlashcard
+	EditFlashcard
+
+Class: SqlLite:
+	...
+
+Class: Gemini:
+	...
+
+-----------------------------------------------------------------------------------------------
+
+Datenbank:
+
+Thema:
+	- ThemaName
+	- (Beschreibung)
+	- * Flashcard
+
+Flashcard
+	- Font
+	- Back
+
