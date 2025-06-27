@@ -69,3 +69,17 @@ C:\Users\ynayn\Documents\Schule\BfK-S\Projekte\Datenbank-Projekt\AI-Flashcards\o
 C:\Users\ynayn\Documents\Schule\BfK-S\Projekte\Datenbank-Projekt\AI-Flashcards\obj\Debug\net7.0-windows\BfK-S_ApiProjekt.pdb
 C:\Users\ynayn\Documents\Schule\BfK-S\Projekte\Datenbank-Projekt\AI-Flashcards\obj\Debug\net7.0-windows\BfK-S_ApiProjekt.genruntimeconfig.cache
 C:\Users\ynayn\Documents\Schule\BfK-S\Projekte\Datenbank-Projekt\AI-Flashcards\obj\Debug\net7.0-windows\ref\BfK-S_ApiProjekt.dll
+C:\Users\de64609\source\repos\BfK-S_ApiProjekt\AI-Flashcards\bin\Debug\net7.0-windows\EntityFramework.SqlServer.dll
+C:\Users\de64609\source\repos\BfK-S_ApiProjekt\AI-Flashcards\bin\Debug\net7.0-windows\EntityFramework.dll
+C:\Users\de64609\source\repos\BfK-S_ApiProjekt\AI-Flashcards\bin\Debug\net7.0-windows\System.Data.SQLite.dll
+C:\Users\de64609\source\repos\BfK-S_ApiProjekt\AI-Flashcards\bin\Debug\net7.0-windows\System.Data.SqlClient.dll
+C:\Users\de64609\source\repos\BfK-S_ApiProjekt\AI-Flashcards\bin\Debug\net7.0-windows\System.Data.SQLite.EF6.dll
+C:\Users\de64609\source\repos\BfK-S_ApiProjekt\AI-Flashcards\bin\Debug\net7.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\de64609\source\repos\BfK-S_ApiProjekt\AI-Flashcards\bin\Debug\net7.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\de64609\source\repos\BfK-S_ApiProjekt\AI-Flashcards\bin\Debug\net7.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\de64609\source\repos\BfK-S_ApiProjekt\AI-Flashcards\bin\Debug\net7.0-windows\runtimes\linux-x64\native\SQLite.Interop.dll
+C:\Users\de64609\source\repos\BfK-S_ApiProjekt\AI-Flashcards\bin\Debug\net7.0-windows\runtimes\osx-x64\native\SQLite.Interop.dll
+C:\Users\de64609\source\repos\BfK-S_ApiProjekt\AI-Flashcards\bin\Debug\net7.0-windows\runtimes\win-x64\native\SQLite.Interop.dll
+C:\Users\de64609\source\repos\BfK-S_ApiProjekt\AI-Flashcards\bin\Debug\net7.0-windows\runtimes\win-x86\native\SQLite.Interop.dll
+C:\Users\de64609\source\repos\BfK-S_ApiProjekt\AI-Flashcards\bin\Debug\net7.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\de64609\source\repos\BfK-S_ApiProjekt\AI-Flashcards\bin\Debug\net7.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll

@@ -13,11 +13,11 @@
             <ColumnDefinition Width="95*"/>
             <ColumnDefinition Width="573*"/>
         </Grid.ColumnDefinitions>
-        <TextBox x:Name="InputTextbox" Grid.Column="1" HorizontalAlignment="Left" Margin="10,67,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="192" Height="36" Grid.ColumnSpan="3"/>
+        <TextBox x:Name="themeTextbox" Grid.Column="1" HorizontalAlignment="Left" Margin="10,67,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="192" Height="36" Grid.ColumnSpan="3"/>
         <TextBlock x:Name="OutputTextbox" Grid.Column="3" HorizontalAlignment="Left" Margin="100,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="414" Width="397" ScrollViewer.CanContentScroll="True" ScrollViewer.HorizontalScrollBarVisibility="Visible"><Run Language="de-de" Text="output hier"/><LineBreak/><Run Language="de-de"/></TextBlock>
         <Button Grid.Column="1" Content="Start" HorizontalAlignment="Left" Margin="10,153,0,0" VerticalAlignment="Top" Width="91" Click="Button_Click" Grid.ColumnSpan="2"/>
         <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="10,51,0,0" TextWrapping="Wrap" Text="Thema:" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="73"/>
-        <TextBox x:Name="AmmountTextBox" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="10,130,0,0" TextWrapping="Wrap" Text="5" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="ammountTextBox" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="10,130,0,0" TextWrapping="Wrap" Text="5" VerticalAlignment="Top" Width="120"/>
         <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="10,114,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="de-de" Text="Anzahl:"/></TextBlock>
 
     </Grid>
