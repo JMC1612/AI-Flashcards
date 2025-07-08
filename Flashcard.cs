@@ -14,8 +14,8 @@ namespace BfK_S_ApiProjekt
 
         public Flashcard(string txtFront, string txtBack) {
         
-            textFront = txtFront;
-            textBack = txtBack;
+            textFront = txtFront.Replace("'", "");
+            textBack = txtBack.Replace("'", "");
 
             if (App.AllFlashcards.Count > 0)
             {

@@ -1,10 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SQLite;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.SQLite;
+using System.Windows.Controls;
+using System.Xml.Linq;
 
 namespace BfK_S_ApiProjekt
 {
@@ -12,13 +16,13 @@ namespace BfK_S_ApiProjekt
     {
 
         public static SQLiteConnection? SQLiteConnector;
-
+        private static string connectionString = $"Data Source={App.DbFileName}; ";
         public static SQLiteConnection CreateConnection()
         {
 
             SQLiteConnection sqlite_conn;
 
-            sqlite_conn = new SQLiteConnection("Data Source=flashcard_db.db; ");
+            sqlite_conn = new SQLiteConnection(connectionString);
 
             // Open the connection:
             try
@@ -40,6 +44,7 @@ namespace BfK_S_ApiProjekt
                 "Front VARCHAR(100)," +
                 "Back VARCHAR(100)" +
                 ");");
+            Debug.WriteLine("Flashcard table created.");
         }
 
         public static void SaveToDb(List<Flashcard> flashcards)
@@ -53,10 +58,48 @@ namespace BfK_S_ApiProjekt
 
         public static void ExecuteDbCommand(string command)
         {
+            try
+            {
+                // Beispiel: Prüfen, ob die Verbindung offen ist
+                if (SQLiteConnector != null && SQLiteConnector.State == ConnectionState.Open)
+                {
+                    Debug.WriteLine("DB-Connection is open, executing command.");
+                }
+            }
+            catch (ObjectDisposedException)
+            {
+                SQLiteConnector = CreateConnection();
+            }
+
             SQLiteCommand sqlite_cmd;
             sqlite_cmd = SQLiteConnector.CreateCommand();
             sqlite_cmd.CommandText = command;
             sqlite_cmd.ExecuteNonQuery();
+        }
+
+        public static List<Flashcard> ReadAllFlashcardsFromDb()
+        {
+            List<Flashcard> flashcards = new List<Flashcard>();
+
+            using (SQLiteConnector)
+            {
+                string query = "SELECT Front, Back FROM Flashcard";
+
+                using (SQLiteCommand command = new SQLiteCommand(query, SQLiteConnector))
+                {
+                    using (SQLiteDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Flashcard flashcard = new Flashcard(reader.GetString("Front"), reader.GetString("Back"));
+                            flashcards.Add(flashcard);
+                        }
+                    }
+                }
+            }
+
+            Debug.WriteLine($"Retrieved {flashcards.Count} flashcards from database");
+            return flashcards;
         }
     }
 }

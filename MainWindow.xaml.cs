@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -41,6 +42,7 @@ namespace BfK_S_ApiProjekt
 
             SQLiteManager.SQLiteConnector = SQLiteManager.CreateConnection();
             SQLiteManager.SetupTables();
+            App.AllFlashcards.AddRange(SQLiteManager.ReadAllFlashcardsFromDb());
         }
 
         private async void Button_Click(object sender, RoutedEventArgs e)

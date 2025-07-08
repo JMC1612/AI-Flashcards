@@ -22,5 +22,6 @@ namespace BfK_S_ApiProjekt
         public static HttpClient internetClient = new HttpClient();
         public static string ApiKey = "AIzaSyDcGWHwF78W-ZS6f9SVuZbP__eB3Sxe3Hc";
         public static List<Flashcard> AllFlashcards = new List<Flashcard>();
+        public static string DbFileName = "flashcard_db.db";
     }
 }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BfK-S_ApiProjekt")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f1f6003e16f4ec3da5130a03a0caaf4f6af7f1b3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2e3d4778ed358c3ba5a03d834994f9b69952a634")]
 [assembly: System.Reflection.AssemblyProductAttribute("BfK-S_ApiProjekt")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BfK-S_ApiProjekt")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

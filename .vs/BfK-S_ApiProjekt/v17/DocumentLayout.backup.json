@@ -7,27 +7,27 @@
       "RelativeMoniker": "D:0:0:{FB47CEB0-A9B7-4B2A-A52D-E80C7CA683FE}|BfK-S_ApiProjekt.csproj|solutionrelative:sqlitemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FB47CEB0-A9B7-4B2A-A52D-E80C7CA683FE}|BfK-S_ApiProjekt.csproj|c:\\users\\de64609\\source\\repos\\bfk-s_apiprojekt\\ai-flashcards\\gemini.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB47CEB0-A9B7-4B2A-A52D-E80C7CA683FE}|BfK-S_ApiProjekt.csproj|solutionrelative:gemini.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FB47CEB0-A9B7-4B2A-A52D-E80C7CA683FE}|BfK-S_ApiProjekt.csproj|c:\\users\\de64609\\source\\repos\\bfk-s_apiprojekt\\ai-flashcards\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB47CEB0-A9B7-4B2A-A52D-E80C7CA683FE}|BfK-S_ApiProjekt.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FB47CEB0-A9B7-4B2A-A52D-E80C7CA683FE}|BfK-S_ApiProjekt.csproj|c:\\users\\de64609\\source\\repos\\bfk-s_apiprojekt\\ai-flashcards\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FB47CEB0-A9B7-4B2A-A52D-E80C7CA683FE}|BfK-S_ApiProjekt.csproj|solutionrelative:app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FB47CEB0-A9B7-4B2A-A52D-E80C7CA683FE}|BfK-S_ApiProjekt.csproj|c:\\users\\de64609\\source\\repos\\bfk-s_apiprojekt\\ai-flashcards\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB47CEB0-A9B7-4B2A-A52D-E80C7CA683FE}|BfK-S_ApiProjekt.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FB47CEB0-A9B7-4B2A-A52D-E80C7CA683FE}|BfK-S_ApiProjekt.csproj|c:\\users\\de64609\\source\\repos\\bfk-s_apiprojekt\\ai-flashcards\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{FB47CEB0-A9B7-4B2A-A52D-E80C7CA683FE}|BfK-S_ApiProjekt.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\dotnet\\sdk\\9.0.300\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.NET.EolTargetFrameworks.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FB47CEB0-A9B7-4B2A-A52D-E80C7CA683FE}|BfK-S_ApiProjekt.csproj|c:\\users\\de64609\\source\\repos\\bfk-s_apiprojekt\\ai-flashcards\\flashcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FB47CEB0-A9B7-4B2A-A52D-E80C7CA683FE}|BfK-S_ApiProjekt.csproj|solutionrelative:flashcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB47CEB0-A9B7-4B2A-A52D-E80C7CA683FE}|BfK-S_ApiProjekt.csproj|c:\\users\\de64609\\source\\repos\\bfk-s_apiprojekt\\ai-flashcards\\gemini.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB47CEB0-A9B7-4B2A-A52D-E80C7CA683FE}|BfK-S_ApiProjekt.csproj|solutionrelative:gemini.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\dotnet\\sdk\\9.0.300\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.NET.EolTargetFrameworks.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -37,34 +37,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Gemini.cs",
-              "DocumentMoniker": "C:\\Users\\de64609\\source\\repos\\BfK-S_ApiProjekt\\AI-Flashcards\\Gemini.cs",
-              "RelativeDocumentMoniker": "Gemini.cs",
-              "ToolTip": "C:\\Users\\de64609\\source\\repos\\BfK-S_ApiProjekt\\AI-Flashcards\\Gemini.cs",
-              "RelativeToolTip": "Gemini.cs",
-              "ViewState": "AgIAADcAAAAAAAAAAAAgwD8AAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T12:34:35.837Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\de64609\\source\\repos\\BfK-S_ApiProjekt\\AI-Flashcards\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\de64609\\source\\repos\\BfK-S_ApiProjekt\\AI-Flashcards\\MainWindow.xaml.cs",
-              "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAwwDEAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-27T08:01:23.326Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -73,9 +47,22 @@
               "RelativeDocumentMoniker": "SQLiteManager.cs",
               "ToolTip": "C:\\Users\\de64609\\source\\repos\\BfK-S_ApiProjekt\\AI-Flashcards\\SQLiteManager.cs",
               "RelativeToolTip": "SQLiteManager.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAQwA0AAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAADcAAAAAAAAAAAAUwEYAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-24T12:58:42.25Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\de64609\\source\\repos\\BfK-S_ApiProjekt\\AI-Flashcards\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\de64609\\source\\repos\\BfK-S_ApiProjekt\\AI-Flashcards\\MainWindow.xaml.cs",
+              "RelativeToolTip": "MainWindow.xaml.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAiwCwAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T08:01:23.326Z",
               "EditorCaption": ""
             },
             {
@@ -86,7 +73,7 @@
               "RelativeDocumentMoniker": "App.xaml.cs",
               "ToolTip": "C:\\Users\\de64609\\source\\repos\\BfK-S_ApiProjekt\\AI-Flashcards\\App.xaml.cs",
               "RelativeToolTip": "App.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAwwBgAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-28T09:30:57.842Z",
               "EditorCaption": ""
@@ -94,6 +81,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "Flashcard.cs",
+              "DocumentMoniker": "C:\\Users\\de64609\\source\\repos\\BfK-S_ApiProjekt\\AI-Flashcards\\Flashcard.cs",
+              "RelativeDocumentMoniker": "Flashcard.cs",
+              "ToolTip": "C:\\Users\\de64609\\source\\repos\\BfK-S_ApiProjekt\\AI-Flashcards\\Flashcard.cs",
+              "RelativeToolTip": "Flashcard.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBEAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T08:01:08.122Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\de64609\\source\\repos\\BfK-S_ApiProjekt\\AI-Flashcards\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",
@@ -105,7 +105,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Microsoft.NET.EolTargetFrameworks.targets",
               "DocumentMoniker": "C:\\Program Files\\dotnet\\sdk\\9.0.300\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.NET.EolTargetFrameworks.targets",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Program Files\\dotnet\\sdk\\9.0.300\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.NET.EolTargetFrameworks.targets",
@@ -118,15 +118,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Flashcard.cs",
-              "DocumentMoniker": "C:\\Users\\de64609\\source\\repos\\BfK-S_ApiProjekt\\AI-Flashcards\\Flashcard.cs",
-              "RelativeDocumentMoniker": "Flashcard.cs",
-              "ToolTip": "C:\\Users\\de64609\\source\\repos\\BfK-S_ApiProjekt\\AI-Flashcards\\Flashcard.cs",
-              "RelativeToolTip": "Flashcard.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "Gemini.cs",
+              "DocumentMoniker": "C:\\Users\\de64609\\source\\repos\\BfK-S_ApiProjekt\\AI-Flashcards\\Gemini.cs",
+              "RelativeDocumentMoniker": "Gemini.cs",
+              "ToolTip": "C:\\Users\\de64609\\source\\repos\\BfK-S_ApiProjekt\\AI-Flashcards\\Gemini.cs",
+              "RelativeToolTip": "Gemini.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAgwCEAAACZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-27T08:01:08.122Z",
+              "WhenOpened": "2025-06-24T12:34:35.837Z",
               "EditorCaption": ""
             }
           ]
