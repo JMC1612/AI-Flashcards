@@ -4,21 +4,50 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BfK_S_ApiProjekt"
+        xmlns:views="clr-namespace:BfK_S_ApiProjekt.ViewViewModels"
+        xmlns:items="clr-namespace:BfK_S_ApiProjekt.Items"
+        xmlns:ui="http://schemas.modernwpf.com/2019"
+        ui:WindowHelper.UseModernWindowStyle="True"
+        d:DataContext="{d:DesignInstance Type=views:MainViewModel}"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow"
+        Height="800"
+        Width="800">
+    <Window.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Button"
+                   BasedOn="{StaticResource DefaultButtonStyle}" />
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid Margin="10">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="54*"/>
-            <ColumnDefinition Width="78*"/>
-            <ColumnDefinition Width="95*"/>
-            <ColumnDefinition Width="573*"/>
+            <ColumnDefinition Width="auto" /> 
+            <ColumnDefinition Width="10" />
+            <ColumnDefinition Width="auto" />
         </Grid.ColumnDefinitions>
-        <TextBox x:Name="themeTextbox" Grid.Column="1" HorizontalAlignment="Left" Margin="10,67,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="192" Height="36" Grid.ColumnSpan="3"/>
-        <TextBlock x:Name="OutputTextbox" Grid.Column="3" HorizontalAlignment="Left" Margin="100,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="414" Width="397" ScrollViewer.CanContentScroll="True" ScrollViewer.HorizontalScrollBarVisibility="Visible"><Run Language="de-de" Text="output hier"/><LineBreak/><Run Language="de-de"/></TextBlock>
-        <Button Grid.Column="1" Content="Start" HorizontalAlignment="Left" Margin="10,153,0,0" VerticalAlignment="Top" Width="91" Click="Button_Click" Grid.ColumnSpan="2"/>
-        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="10,51,0,0" TextWrapping="Wrap" Text="Thema:" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="73"/>
-        <TextBox x:Name="ammountTextBox" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="10,130,0,0" TextWrapping="Wrap" Text="5" VerticalAlignment="Top" Width="120"/>
-        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="10,114,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="de-de" Text="Anzahl:"/></TextBlock>
 
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="5" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+        <Border BorderBrush="Black"
+                BorderThickness="1">
+            <views:FlashcardTableView DataContext="{Binding FlashcardTableViewModel}" />
+        </Border>
+
+        <Rectangle Width="10" />
+
+        <Border BorderBrush="Black"
+                BorderThickness="1"
+                Grid.Column="2"
+                Grid.RowSpan="3">
+            <views:ShowFlashcardView DataContext="{Binding ShowFlashcardViewModel}" />
+        </Border>
+
+        <Button Content="Create new Flashcard"
+                Command="{Binding CreateNewFlashcardCommand}"
+                HorizontalAlignment="Center"
+                Grid.Row="2" />
     </Grid>
 </Window>

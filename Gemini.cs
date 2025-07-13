@@ -61,9 +61,9 @@ namespace BfK_S_ApiProjekt
         }
 
         // macht aus dem gemini generierten text Lernkarten :)
-        public static List<Flashcard> GenerateGeminiFlashcards(string geminiString)
+        public static List<FlashcardAlt> GenerateGeminiFlashcards(string geminiString)
         {
-            List<Flashcard> geminiFlashcardList = new List<Flashcard>();
+            List<FlashcardAlt> geminiFlashcardList = new List<FlashcardAlt>();
 
             var lines = geminiString.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
 
@@ -75,7 +75,7 @@ namespace BfK_S_ApiProjekt
                 string[] cardTextParts = line.Trim().Split(new[] { ";front_text:", ";back_text:" }, StringSplitOptions.RemoveEmptyEntries);
                 if (cardTextParts.Length == 2)
                 {
-                    geminiFlashcardList.Add(new Flashcard(cardTextParts[0].Trim(), cardTextParts[1].Trim()));
+                    geminiFlashcardList.Add(new FlashcardAlt(cardTextParts[0].Trim(), cardTextParts[1].Trim()));
                 }
             }
 

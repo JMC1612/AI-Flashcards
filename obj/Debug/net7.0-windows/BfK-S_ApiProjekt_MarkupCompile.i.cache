@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\de64609\source\repos\BfK-S_ApiProjekt\AI-Flashcards\obj\Debug\net7.0-windows\
+C:\Users\ynayn\Documents\Schule\BfK-S\Projekte\Datenbank-Projekt\AI-Flashcards\obj\Debug\net7.0-windows\
 BfK_S_ApiProjekt
 none
 false
-TRACE;DEBUG;NET;NET7_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
-C:\Users\de64609\source\repos\BfK-S_ApiProjekt\AI-Flashcards\App.xaml
-11407045341
+TRACE;DEBUG;NET;NET7_0;NETCOREAPP
+C:\Users\ynayn\Documents\Schule\BfK-S\Projekte\Datenbank-Projekt\AI-Flashcards\App.xaml
+111472981075
 
-81434156651
-204-1540875990
-MainWindow.xaml;
+34-243037014
+2081686961194
+MainWindow.xaml;ViewViewModels\CreateFlashcard\CreateFlashcardView.xaml;ViewViewModels\CreateFlashcard\CreateMultipleFlashcardsGeminiView.xaml;ViewViewModels\CreateFlashcard\CreateSingleFlashcardView.xaml;ViewViewModels\CreateFlashcard\CreateThemeView.xaml;ViewViewModels\Delete\DeleteFlashcardView.xaml;ViewViewModels\Delete\DeleteThemeView.xaml;ViewViewModels\Edit\EditFlashcardView.xaml;ViewViewModels\Edit\EditThemeView.xaml;ViewViewModels\FlashcardTableView.xaml;ViewViewModels\ShowFlashcardView.xaml;
 
-False
+True
 

@@ -20,6 +20,7 @@ using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using BfK_S_ApiProjekt.ViewViewModels;
 using Microsoft.VisualBasic;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -39,31 +40,32 @@ namespace BfK_S_ApiProjekt
         {
             InitializeComponent();
 
+
             SQLiteManager.SQLiteConnector = SQLiteManager.CreateConnection();
             SQLiteManager.SetupTables();
         }
 
-        private async void Button_Click(object sender, RoutedEventArgs e)
-        {
-            await Gemini.AiCall(Convert.ToInt16(ammountTextBox.Text), themeTextbox.Text);
+        //private async void Button_Click(object sender, RoutedEventArgs e)
+        //{
+        //    await Gemini.AiCall(Convert.ToInt16(ammountTextBox.Text), themeTextbox.Text);
 
-            //UpdateFlashcardDisplay();
-        }
+        //    //UpdateFlashcardDisplay();
+        //}
 
-        private void UpdateFlashcardDisplay() //solange wir kein UI haben, einf als Text anzeigen
-        {
-            string testDisplaytext = "";
+        //private void UpdateFlashcardDisplay() //solange wir kein UI haben, einf als Text anzeigen
+        //{
+        //    string testDisplaytext = "";
 
-            foreach (var card in App.AllFlashcards)
-            {
-                testDisplaytext += $"ID: {card.id}\n";
-                testDisplaytext += $"Front: {card.textFront}\n";
-                testDisplaytext += $"Back: {card.textBack}\n";
-                testDisplaytext += "";
-            }
-            OutputTextbox.Text = testDisplaytext;
-            Debug.Write(testDisplaytext);
-        }
+        //    foreach (var card in App.AllFlashcards)
+        //    {
+        //        testDisplaytext += $"ID: {card.id}\n";
+        //        testDisplaytext += $"Front: {card.textFront}\n";
+        //        testDisplaytext += $"Back: {card.textBack}\n";
+        //        testDisplaytext += "";
+        //    }
+        //    OutputTextbox.Text = testDisplaytext;
+        //    Debug.Write(testDisplaytext);
+        //}
 
     }
 }

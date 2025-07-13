@@ -47,3 +47,24 @@ Flashcard
 	- Font
 	- Back
 
+------------------------
+
+Create:
+Gemini über Thema (mehrere)
+Gemini über Fragestellung
+selber Erstellen
+
+Edit:
+editieren
+löschen
+
+Sortieren:
+Thema wechseln
+
+Lernmodus
+
+--------------------------
+
+!!Achtung:
+Evt. beim laden aus sql nicht direkt alle laden, sondern nur Themen und erst Flashcards wenn Thema angewählt
+

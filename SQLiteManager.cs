@@ -42,7 +42,7 @@ namespace BfK_S_ApiProjekt
                 ");");
         }
 
-        public static void SaveToDb(List<Flashcard> flashcards)
+        public static void SaveToDb(List<FlashcardAlt> flashcards)
         {
             foreach(var flashcard in flashcards)
             {

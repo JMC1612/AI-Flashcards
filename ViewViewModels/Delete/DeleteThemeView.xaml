@@ -1,0 +1,103 @@
+﻿<Window x:Class="BfK_S_ApiProjekt.ViewViewModels.Delete.DeleteThemeView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BfK_S_ApiProjekt.ViewViewModels.Delete"
+        d:DataContext="{d:DesignInstance Type=local:DeleteThemeViewModel}"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="White"
+        ResizeMode="NoResize">
+    <Window.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Button"
+                   BasedOn="{StaticResource DefaultButtonStyle}">
+                <Setter Property="Background"
+                        Value="Transparent" />
+                <Setter Property="Margin"
+                        Value="10" />
+                <Setter Property="BorderBrush"
+                        Value="White" />
+                <Setter Property="Padding"
+                        Value="3" />
+            </Style>
+            <Style TargetType="CheckBox"
+                   BasedOn="{StaticResource DefaultCheckBoxStyle}">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="CheckBox">
+                            <BulletDecorator>
+                                <BulletDecorator.Bullet>
+                                    <Border x:Name="Border"
+                                            Width="16"
+                                            Height="16"
+                                            Background="White"
+                                            BorderBrush="Black"
+                                            BorderThickness="1"
+                                            CornerRadius="2">
+                                        <Path x:Name="CheckMark"
+                                              Margin="1"
+                                              Data="M 2 8 L 6 12 L 15 2"
+                                              Stroke="Black"
+                                              Stretch="Uniform"
+                                              StrokeThickness="1.5"
+                                              Visibility="Collapsed" />
+                                    </Border>
+                                </BulletDecorator.Bullet>
+                                <ContentPresenter Margin="4,0,0,0"
+                                                  VerticalAlignment="Center"
+                                                  HorizontalAlignment="Left" />
+                            </BulletDecorator>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsChecked"
+                                         Value="True">
+                                    <Setter TargetName="CheckMark"
+                                            Property="Visibility"
+                                            Value="Visible" />
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <StackPanel Background="Red">
+        <DockPanel>
+            <TextBlock Text="Delete Theme"
+                       FontSize="20"
+                       Margin="10"
+                       Foreground="White" />
+            <Button Content="X"
+                    Background="Transparent"
+                    HorizontalAlignment="Right"
+                    Command="{Binding CloseCommand}"
+                    CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=Window}}" />
+        </DockPanel>
+
+        <StackPanel Margin="10,0"
+                    Background="White"
+                    VerticalAlignment="Stretch"
+                    HorizontalAlignment="Stretch">
+            <CheckBox Margin="10,5"
+                      Content="Also delete all flashcards in the theme"
+                      IsChecked="True" />
+
+
+            <TextBlock Margin="10,5"
+                       Text="Confirm deletion!"
+                       HorizontalAlignment="Stretch"
+                       Width="300" />
+        </StackPanel>
+
+        <DockPanel>
+            <Button Content="Confirm"
+                    MinWidth="70"
+                    Command="{Binding ConfirmCommand}"
+                    HorizontalAlignment="Right" />
+        </DockPanel>
+    </StackPanel>
+</Window>

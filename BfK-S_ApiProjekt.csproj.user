@@ -7,7 +7,69 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="ViewViewModels\CreateFlashcard\CreateFlashcardView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ViewViewModels\CreateFlashcard\CreateMultipleFlashcardsGeminiView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ViewViewModels\CreateFlashcard\CreateSingleFlashcardView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ViewViewModels\CreateFlashcard\CreateThemeView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ViewViewModels\Delete\DeleteFlashcardView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ViewViewModels\Delete\DeleteThemeView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ViewViewModels\Edit\EditFlashcardView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ViewViewModels\Edit\EditThemeView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ViewViewModels\FlashcardTableView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ViewViewModels\ShowFlashcardView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ViewViewModels\CreateFlashcard\CreateFlashcardView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ViewViewModels\CreateFlashcard\CreateMultipleFlashcardsGeminiView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ViewViewModels\CreateFlashcard\CreateSingleFlashcardView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ViewViewModels\CreateFlashcard\CreateThemeView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ViewViewModels\Delete\DeleteFlashcardView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ViewViewModels\Delete\DeleteThemeView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ViewViewModels\Edit\EditFlashcardView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ViewViewModels\Edit\EditThemeView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ViewViewModels\FlashcardTableView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ViewViewModels\ShowFlashcardView.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

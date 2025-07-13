@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace BfK_S_ApiProjekt
 {
-    public class Flashcard
+    public class FlashcardAlt
     {
         public int id = 0;
         public string textFront = "";
         public string textBack = "";
 
-        public Flashcard(string txtFront, string txtBack) {
+        public FlashcardAlt(string txtFront, string txtBack) {
         
             textFront = txtFront;
             textBack = txtBack;
