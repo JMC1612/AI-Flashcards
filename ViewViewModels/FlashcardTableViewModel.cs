@@ -4,6 +4,7 @@ using BfK_S_ApiProjekt.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.DirectoryServices;
 using System.Linq;
 using System.Text;
@@ -17,50 +18,22 @@ namespace BfK_S_ApiProjekt.ViewViewModels
         public FlashcardTableViewModel(LoadedSqlData loadedSqlData)
         {
             _loadedSqlData = loadedSqlData;
+            _loadedSqlData.PropertyChanged += LoadedSqlData_PropertyChanged;
         }
 
-        private ObservableCollection<Theme> themes = new()
-        {
-            new Theme()
-            {
-                Name = "Kategorie A",
-                Id = 0,
-                Flashcards = new ObservableCollection<Flashcard>
-                {
-                    new() { FrontText = "Eintrag A1", BackText = string.Empty, ID = 0 },
-                    new() { FrontText = "Eintrag A2", BackText = string.Empty, ID = 1 },
-                }
-            },
-            new Theme
-            {
-                Name = "Kategorie B",
-                Id = 1,
-                Flashcards = new ObservableCollection<Flashcard>
-                {
-                    new() { FrontText = "Eintrag B1", BackText = string.Empty, ID = 2 },
-                    new() { FrontText = "Eintrag B2", BackText = string.Empty, ID = 3 },
-                    new() { FrontText = "Eintrag B3", BackText = string.Empty, ID = 4 }
-                }
-            },
-            new Theme
-            {
-                Name = "Kategorie C",
-                Id = 2,
-                Flashcards = new ObservableCollection<Flashcard>
-                {
-                    new() { FrontText = "Eintrag C1", BackText = string.Empty, ID = 5 }
-                }
-            }
-        };
         public ObservableCollection<Theme> Themes
         {
-            get => /*_loadedSqlData.LoadSqlData*/themes;
+            get => _loadedSqlData.LoadSqlData;
             set
             {
-                /*_loadedSqlData.LoadSqlData*/
-                themes = value;
+                _loadedSqlData.LoadSqlData = value;
                 OnPropertyChanged(nameof(Themes));
             }
+        }
+
+        private void LoadedSqlData_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            OnPropertyChanged(nameof(Themes));
         }
     }
 }

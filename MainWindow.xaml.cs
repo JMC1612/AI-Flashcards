@@ -41,8 +41,8 @@ namespace BfK_S_ApiProjekt
             InitializeComponent();
 
 
-            SQLiteManager.SQLiteConnector = SQLiteManager.CreateConnection();
-            SQLiteManager.SetupTables();
+            //SQLiteManager.SQLiteConnector = SQLiteManager.Initialize();
+            //SQLiteManager.SetupTables();
         }
 
         //private async void Button_Click(object sender, RoutedEventArgs e)
