@@ -6,6 +6,8 @@
         xmlns:local="clr-namespace:BfK_S_ApiProjekt.ViewViewModels.CreateFlashcard"
         mc:Ignorable="d"
         WindowStyle="None"
+        SizeToContent="WidthAndHeight"
+        WindowStartupLocation="CenterScreen"
         AllowsTransparency="True"
         Background="White"
         ResizeMode="NoResize">
@@ -41,7 +43,7 @@
         <StackPanel Background="White"
                     VerticalAlignment="Stretch"
                     HorizontalAlignment="Stretch">
-            <local:CreateSingleFlashcardView />
+            <local:CreateSingleFlashcardView DataContext="{Binding CreateSingleFlashcardViewModel}" />
 
         </StackPanel>
     </StackPanel>

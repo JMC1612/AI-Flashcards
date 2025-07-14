@@ -46,7 +46,14 @@ namespace BfK_S_ApiProjekt.ViewViewModels.Edit
 
         private void SaveTheme(object para)
         {
-            _theme.Name = TempName;
+            if (TempName != string.Empty)
+            {
+                _theme.Name = TempName;
+                SQLiteManager.UpdateTheme(_theme);
+
+                if (para is Window window)
+                    window.Close();
+            }
         }
 
         private void CloseWindow(object para)

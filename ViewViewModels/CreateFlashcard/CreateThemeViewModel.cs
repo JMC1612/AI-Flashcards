@@ -1,4 +1,5 @@
 ﻿using BfK_S_ApiProjekt.GeneralClasses;
+using BfK_S_ApiProjekt.Items;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,7 +33,17 @@ namespace BfK_S_ApiProjekt.ViewViewModels.CreateFlashcard
 
         private void CreateTheme(object para)
         {
-            //TODO
+            if (TempName != string.Empty)
+            {
+                Theme newTheme = new()
+                {
+                    Name = TempName
+                };
+                SQLiteManager.InsertTheme(newTheme);
+
+                if (para is Window window)
+                    window.Close();
+            }
         }
 
         private void CloseWindow(object para)

@@ -64,8 +64,16 @@ namespace BfK_S_ApiProjekt.ViewViewModels
 
         private void SaveFlashcard(object para)
         {
-            _flashcard.FrontText = TempFrontText;
-            _flashcard.BackText = TempBackText;
+            if (TempFrontText != string.Empty && TempBackText != string.Empty)
+            {
+                _flashcard.FrontText = TempFrontText;
+                _flashcard.BackText = TempBackText;
+                SQLiteManager.UpdateFlashcard(_flashcard);
+
+                if (para is Window window)
+                    window.Close();
+            }
+            
         }
 
         private void CloseWindow(object para)

@@ -51,6 +51,9 @@ namespace BfK_S_ApiProjekt
 
             services.AddSingleton<LoadedSqlData>();
 
+            services.AddSingleton<SQLiteManager>();
+            services.AddSingleton<Gemini>();
+
             ServiceProvider = services.BuildServiceProvider();
 
             var mainWindow = new MainWindow

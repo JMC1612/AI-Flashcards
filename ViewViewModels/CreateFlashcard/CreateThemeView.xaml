@@ -7,6 +7,8 @@
         mc:Ignorable="d"
         d:DataContext="{d:DesignInstance Type=local:CreateThemeViewModel}"
         WindowStyle="None"
+        SizeToContent="WidthAndHeight"
+        WindowStartupLocation="CenterScreen"
         AllowsTransparency="True"
         Background="White"
         ResizeMode="NoResize">
@@ -52,7 +54,8 @@
         <DockPanel>
             <Button Content="Create"
                     MinWidth="70"
-                    Command="{Binding CreateCommand}"
+                    Command="{Binding CreateThemeCommand}"
+                    CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=Window}}"
                     HorizontalAlignment="Right" />
         </DockPanel>
 

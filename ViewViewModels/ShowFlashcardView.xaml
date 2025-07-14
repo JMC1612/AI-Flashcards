@@ -4,23 +4,36 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:BfK_S_ApiProjekt.ViewViewModels"
+             xmlns:converter="clr-namespace:BfK_S_ApiProjekt.Converter"
              d:DataContext="{d:DesignInstance Type=local:ShowFlashcardViewModel}"
              mc:Ignorable="d"
              d:DesignHeight="450"
              d:DesignWidth="800">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <converter:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter" />
+        </ResourceDictionary>
+    </UserControl.Resources>
     <Grid Background="White">
-        <Button Command="{Binding ChangeFlashcardSideCommand}"
-                Background="Transparent"
-                Margin="10"
-                Padding="0"
-                Visibility="{Binding ShowFlashcard}">
+        <Grid Visibility="{Binding ShowFlashcard, Converter={StaticResource BoolToVisibilityConverter}}"
+              MinWidth="300"
+              MinHeight="200" Margin="10">
             <TextBox IsReadOnly="True"
                      VerticalAlignment="Stretch"
                      Text="{Binding ShowedFlashcardSide}"
+                     TextWrapping="Wrap"
                      VerticalScrollBarVisibility="Visible"
                      Width="300"
                      Height="200"
                      Margin="0" />
-        </Button>
+
+            <Button Background="Transparent"
+                    Command="{Binding ChangeFlashcardSideCommand}"
+                    Width="300"
+                    Height="200"
+                    Opacity="0"
+                    VerticalAlignment="Stretch"
+                    HorizontalAlignment="Center"/>
+        </Grid>
     </Grid>
 </UserControl>

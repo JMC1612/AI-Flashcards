@@ -53,6 +53,24 @@ namespace BfK_S_ApiProjekt
         );");
 
             Debug.WriteLine("Tables created.");
+
+            // "unsorted"-Theme prüfen und hinzufügen, falls nötig
+            const string checkUnsortedQuery = "SELECT COUNT(*) FROM Themes WHERE Name = 'unsorted';";
+
+            using var cmd = new SQLiteCommand(checkUnsortedQuery, SQLiteConnector);
+            long count = (long)cmd.ExecuteScalar();
+
+            if (count == 0)
+            {
+                // Theme mit ID = 1 erzwingen (sofern Tabelle leer ist)
+                const string insertUnsorted = "INSERT INTO Themes (Id, Name) VALUES (1, 'unsorted');";
+                ExecuteDbCommand(insertUnsorted);
+                Debug.WriteLine("Theme 'unsorted' hinzugefügt mit ID 1.");
+            }
+            else
+            {
+                Debug.WriteLine("Theme 'unsorted' bereits vorhanden.");
+            }
         }
 
         public static void ExecuteDbCommand(string command, Dictionary<string, object>? parameters = null)
@@ -106,9 +124,9 @@ namespace BfK_S_ApiProjekt
         {
             string query = "INSERT INTO Themes (Name) VALUES (@name)";
             var parameters = new Dictionary<string, object>
-        {
-            { "@name", theme.Name }
-        };
+            {
+                { "@name", theme.Name }
+            };
 
             ExecuteDbCommand(query, parameters);
         }

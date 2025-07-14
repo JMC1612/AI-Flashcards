@@ -27,9 +27,12 @@ namespace BfK_S_ApiProjekt.ViewViewModels
         private void LoadedSqlData_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
             OnPropertyChanged(nameof(SelectedFlashcard));
-            OnPropertyChanged(nameof(FlashcardFront));
-            OnPropertyChanged(nameof(FlashcardBack));
-            ShowedFlashcardSide = SelectedFlashcard.FrontText;
+            if (SelectedFlashcard != null)
+            {
+                OnPropertyChanged(nameof(FlashcardFront));
+                OnPropertyChanged(nameof(FlashcardBack));
+                ShowedFlashcardSide = SelectedFlashcard.FrontText;
+            }
         }
 
         public Flashcard SelectedFlashcard

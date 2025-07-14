@@ -7,6 +7,8 @@
         d:DataContext="{d:DesignInstance Type=local:EditFlashcardViewModel}"
         mc:Ignorable="d"
         WindowStyle="None"
+        SizeToContent="WidthAndHeight"
+        WindowStartupLocation="CenterScreen"
         AllowsTransparency="True"
         Background="White"
         ResizeMode="NoResize">
@@ -94,6 +96,7 @@
             <Button Content="Save"
                     MinWidth="70"
                     Command="{Binding SaveCommand}"
+                    CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=Window}}"
                     HorizontalAlignment="Right" />
         </DockPanel>
 

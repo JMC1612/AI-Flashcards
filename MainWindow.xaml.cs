@@ -29,7 +29,6 @@ using JsonSerializer = System.Text.Json.JsonSerializer;
 
 namespace BfK_S_ApiProjekt
 {
-    // BeSchumacher -> Hr Schumacher Github
 
     /// <summary>
     /// Interaction logic for MainWindow.xaml

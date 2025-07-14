@@ -7,6 +7,8 @@
         d:DataContext="{d:DesignInstance Type=local:DeleteThemeViewModel}"
         mc:Ignorable="d"
         WindowStyle="None"
+        SizeToContent="WidthAndHeight"
+        WindowStartupLocation="CenterScreen"
         AllowsTransparency="True"
         Background="White"
         ResizeMode="NoResize">
@@ -36,7 +38,8 @@
                                             Background="White"
                                             BorderBrush="Black"
                                             BorderThickness="1"
-                                            CornerRadius="2">
+                                            CornerRadius="2"
+                                            VerticalAlignment="Center">
                                         <Path x:Name="CheckMark"
                                               Margin="1"
                                               Data="M 2 8 L 6 12 L 15 2"
@@ -82,9 +85,9 @@
                     Background="White"
                     VerticalAlignment="Stretch"
                     HorizontalAlignment="Stretch">
-            <CheckBox Margin="10,5"
+            <!--<CheckBox Margin="10,5"
                       Content="Also delete all flashcards in the theme"
-                      IsChecked="True" />
+                      IsChecked="True" />-->
 
 
             <TextBlock Margin="10,5"
@@ -97,6 +100,7 @@
             <Button Content="Confirm"
                     MinWidth="70"
                     Command="{Binding ConfirmCommand}"
+                    CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=Window}}"
                     HorizontalAlignment="Right" />
         </DockPanel>
     </StackPanel>

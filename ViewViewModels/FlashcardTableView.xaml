@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:BfK_S_ApiProjekt.ViewViewModels"
+             xmlns:converter="clr-namespace:BfK_S_ApiProjekt.Converter"
              d:DataContext="{d:DesignInstance Type=local:FlashcardTableViewModel}"
              mc:Ignorable="d"
              d:DesignHeight="450"
@@ -15,11 +16,13 @@
                 <Setter Property="Background"
                         Value="Transparent" />
             </Style>
+            <converter:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter" />
         </ResourceDictionary>
     </UserControl.Resources>
 
     <Grid>
         <DataGrid ItemsSource="{Binding Themes}"
+                  SelectedItem="{Binding SelectedItem, Mode=TwoWay}"
                   AutoGenerateColumns="False"
                   CanUserAddRows="False"
                   SelectionMode="Single"
@@ -53,16 +56,17 @@
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <StackPanel Orientation="Horizontal"
-                                        HorizontalAlignment="Center">
+                                        HorizontalAlignment="Center"
+                                        Visibility="{Binding IsButtonsVisible, Converter={StaticResource BoolToVisibilityConverter}}">
                                 <Button Content="&#xE104;"
                                         FontFamily="Segoe MDL2 Assets"
                                         Margin="5,0"
-                                        Command="{Binding DataContext.EditCommand, RelativeSource={RelativeSource AncestorType=DataGrid}}"
+                                        Command="{Binding DataContext.EditThemeCommand, RelativeSource={RelativeSource AncestorType=DataGrid}}"
                                         CommandParameter="{Binding}" />
                                 <Button Content="&#xE107;"
                                         FontFamily="Segoe MDL2 Assets"
                                         Margin="5,0"
-                                        Command="{Binding DataContext.DeleteCommand, RelativeSource={RelativeSource AncestorType=DataGrid}}"
+                                        Command="{Binding DataContext.DeleteThemeCommand, RelativeSource={RelativeSource AncestorType=DataGrid}}"
                                         CommandParameter="{Binding}" />
                             </StackPanel>
                         </DataTemplate>
@@ -73,7 +77,7 @@
             <DataGrid.RowDetailsTemplate>
                 <DataTemplate>
                     <ListBox ItemsSource="{Binding Flashcards}"
-                             SelectedItem="{Binding SelectedFlashcard, Mode=TwoWay}"
+                             SelectedItem="{Binding DataContext.SelectedItem, RelativeSource={RelativeSource AncestorType=DataGrid}, Mode=TwoWay}"
                              BorderThickness="0">
                         <ListBox.ItemContainerStyle>
                             <Style TargetType="ListBoxItem">

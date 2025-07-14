@@ -42,5 +42,15 @@ namespace BfK_S_ApiProjekt.Items
                 OnPropertyChanged(nameof(Flashcards));
             }
         }
+
+        public bool IsButtonsVisible
+        {
+            get
+            {
+                if (Id == 1 && Name == "unsorted")
+                    return false;
+                return true;
+            }
+        }
     }
 }

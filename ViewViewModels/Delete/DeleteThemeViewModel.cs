@@ -15,19 +15,22 @@ namespace BfK_S_ApiProjekt.ViewViewModels.Delete
         private readonly Theme _theme;
 
         public ICommand ConfirmCommand { get; set; }
-        public ICommand CloseCommad { get; set; }
+        public ICommand CloseCommand { get; set; }
         public DeleteThemeViewModel(Theme theme)
         {
             _theme = theme;
 
             ConfirmCommand = new RelayCommand(ConfirmDeletion);
-            CloseCommad = new RelayCommand(CloseWindow);
+            CloseCommand = new RelayCommand(CloseWindow);
         }
 
 
         private void ConfirmDeletion(object para) 
         {
-            //TODO
+            SQLiteManager.DeleteTheme(_theme.Id);
+
+            if (para is Window window)
+                window.Close();
         }
         private void CloseWindow(object para)
         {

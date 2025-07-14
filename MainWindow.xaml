@@ -11,8 +11,8 @@
         d:DataContext="{d:DesignInstance Type=views:MainViewModel}"
         mc:Ignorable="d"
         Title="MainWindow"
-        Height="800"
-        Width="800">
+        SizeToContent="WidthAndHeight"
+        WindowStartupLocation="CenterScreen">
     <Window.Resources>
         <ResourceDictionary>
             <Style TargetType="Button"

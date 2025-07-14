@@ -43,10 +43,13 @@
                 <Rectangle Width="10"
                            Height="1" />
                 <ComboBox VerticalAlignment="Center"
-                          MinWidth="300" />
+                          MinWidth="300" 
+                          ItemsSource="{Binding Themes}"
+                          DisplayMemberPath="Name"
+                          SelectedItem="{Binding SelectedTheme}"/>
                 <Rectangle Width="10"
                            Height="1" />
-                <Button Content="Create new Theme" />
+                <Button Content="Create new Theme" Command="{Binding CreateThemeCommand}" />
             </StackPanel>
             <Grid Margin="10"
                   Grid.IsSharedSizeScope="True"
@@ -54,7 +57,7 @@
                   HorizontalAlignment="Stretch">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition SharedSizeGroup="Width"
-                                      MinWidth="300" />
+                                      Width="300" />
                     <ColumnDefinition Width="10" />
                     <ColumnDefinition SharedSizeGroup="Width" />
                 </Grid.ColumnDefinitions>
@@ -76,7 +79,8 @@
                         VerticalAlignment="Stretch">
                     <TextBox VerticalAlignment="Stretch"
                              Text="{Binding TempFrontText}"
-                             VerticalScrollBarVisibility="Visible" />
+                             VerticalScrollBarVisibility="Visible"
+                             TextWrapping="Wrap"/>
                 </Border>
 
                 <TextBlock Text="Backside"
@@ -89,7 +93,8 @@
                         VerticalAlignment="Stretch">
                     <TextBox VerticalAlignment="Stretch"
                              Text="{Binding TempBackText}"
-                             VerticalScrollBarVisibility="Visible" />
+                             VerticalScrollBarVisibility="Visible"
+                             TextWrapping="Wrap"/>
                 </Border>
             </Grid>
             <StackPanel  Margin="10,-10,10,10">
@@ -103,6 +108,7 @@
             <Button Content="Create"
                     MinWidth="70"
                     Command="{Binding CreateFlashcardCommand}"
+                    CommandParameter="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Window}}"
                     HorizontalAlignment="Right"
                     Style="{StaticResource CreateButtonStyle}" />
         </DockPanel>

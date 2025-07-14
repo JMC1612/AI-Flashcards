@@ -15,18 +15,21 @@ namespace BfK_S_ApiProjekt.ViewViewModels.Delete
         private readonly Flashcard _flashcard;
 
         public ICommand ConfirmCommand { get; set; }
-        public ICommand CloseCommad {  get; set; }
+        public ICommand CloseCommand {  get; set; }
         public DeleteFlashcardViewModel(Flashcard flashcard)
         {
             _flashcard = flashcard;
 
             ConfirmCommand = new RelayCommand(ConfirmDeletion);
-            CloseCommad = new RelayCommand(CloseWindow);
+            CloseCommand = new RelayCommand(CloseWindow);
         }
 
         private void ConfirmDeletion (object para)
         {
-            //TODO
+            SQLiteManager.DeleteFlashcard(_flashcard.ID);
+
+            if (para is Window window)
+                window.Close();
         }
         private void CloseWindow(object para)
         {

@@ -7,6 +7,8 @@
         d:DataContext="{d:DesignInstance Type=local:DeleteFlashcardViewModel}"
         mc:Ignorable="d"
         WindowStyle="None"
+        SizeToContent="WidthAndHeight"
+        WindowStartupLocation="CenterScreen"
         AllowsTransparency="True"
         Background="White"
         ResizeMode="NoResize">
@@ -52,6 +54,7 @@
             <Button Content="Confirm"
                     MinWidth="70"
                     Command="{Binding ConfirmCommand}"
+                    CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=Window}}"
                     HorizontalAlignment="Right" />
         </DockPanel>
     </StackPanel>
