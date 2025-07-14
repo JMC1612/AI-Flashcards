@@ -68,3 +68,12 @@ Lernmodus
 !!Achtung:
 Evt. beim laden aus sql nicht direkt alle laden, sondern nur Themen und erst Flashcards wenn Thema angewählt
 
+---------------------------------
+
+TODO:
+- Multi Create Flashcard hinzufügen
+
+- Bei Delete Theme noch Funktion hinzufügen alle Flashcards in unsorted zu verschieben
+
+- Bei Edit Flashcard auch eine Möglichkeit hinzufügen das Theme zu ändern
+
