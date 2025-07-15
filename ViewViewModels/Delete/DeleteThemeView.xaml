@@ -30,29 +30,34 @@
                 <Setter Property="Template">
                     <Setter.Value>
                         <ControlTemplate TargetType="CheckBox">
-                            <BulletDecorator>
-                                <BulletDecorator.Bullet>
-                                    <Border x:Name="Border"
-                                            Width="16"
-                                            Height="16"
-                                            Background="White"
-                                            BorderBrush="Black"
-                                            BorderThickness="1"
-                                            CornerRadius="2"
-                                            VerticalAlignment="Center">
-                                        <Path x:Name="CheckMark"
-                                              Margin="1"
-                                              Data="M 2 8 L 6 12 L 15 2"
-                                              Stroke="Black"
-                                              Stretch="Uniform"
-                                              StrokeThickness="1.5"
-                                              Visibility="Collapsed" />
-                                    </Border>
-                                </BulletDecorator.Bullet>
-                                <ContentPresenter Margin="4,0,0,0"
-                                                  VerticalAlignment="Center"
-                                                  HorizontalAlignment="Left" />
-                            </BulletDecorator>
+                            <Grid VerticalAlignment="Center">
+                                <!-- Neu -->
+                                <BulletDecorator VerticalAlignment="Center">
+                                    <!-- Wichtig -->
+                                    <BulletDecorator.Bullet>
+                                        <Border x:Name="Border"
+                                                Width="16"
+                                                Height="16"
+                                                Background="White"
+                                                BorderBrush="Black"
+                                                BorderThickness="1"
+                                                CornerRadius="2"
+                                                VerticalAlignment="Center">
+                                            <!-- Wichtig -->
+                                            <Path x:Name="CheckMark"
+                                                  Margin="1"
+                                                  Data="M 2 8 L 6 12 L 15 2"
+                                                  Stroke="Black"
+                                                  Stretch="Uniform"
+                                                  StrokeThickness="1.5"
+                                                  Visibility="Collapsed" />
+                                        </Border>
+                                    </BulletDecorator.Bullet>
+                                    <ContentPresenter Margin="4,0,0,0"
+                                                      VerticalAlignment="Center"
+                                                      HorizontalAlignment="Left" />
+                                </BulletDecorator>
+                            </Grid>
                             <ControlTemplate.Triggers>
                                 <Trigger Property="IsChecked"
                                          Value="True">
@@ -62,6 +67,7 @@
                                 </Trigger>
                             </ControlTemplate.Triggers>
                         </ControlTemplate>
+
                     </Setter.Value>
                 </Setter>
             </Style>
@@ -85,9 +91,9 @@
                     Background="White"
                     VerticalAlignment="Stretch"
                     HorizontalAlignment="Stretch">
-            <!--<CheckBox Margin="10,5"
+            <CheckBox Margin="10,5"
                       Content="Also delete all flashcards in the theme"
-                      IsChecked="True" />-->
+                      IsChecked="{Binding DeleteAllFlashcardsInTheme}" />
 
 
             <TextBlock Margin="10,5"

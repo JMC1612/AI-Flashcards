@@ -169,7 +169,8 @@ namespace BfK_S_ApiProjekt
                 {
                     ID = reader.GetInt32(0),
                     FrontText = reader.GetString(1),
-                    BackText = reader.GetString(2)
+                    BackText = reader.GetString(2),
+                    ThemeId = themeId
                 });
             }
 
@@ -193,12 +194,13 @@ namespace BfK_S_ApiProjekt
 
         public static void UpdateFlashcard(Flashcard flashcard)
         {
-            string query = "UPDATE Flashcards SET FrontText = @front, BackText = @back WHERE ID = @id";
+            string query = "UPDATE Flashcards SET FrontText = @front, BackText = @back, ThemeId = @themeId WHERE ID = @id";
             var parameters = new Dictionary<string, object>
         {
             { "@front", flashcard.FrontText },
             { "@back", flashcard.BackText },
-            { "@id", flashcard.ID }
+            { "@id", flashcard.ID },
+            {"@themeId", flashcard.ThemeId }
         };
 
             ExecuteDbCommand(query, parameters);

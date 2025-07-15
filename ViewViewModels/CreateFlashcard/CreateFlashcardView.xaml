@@ -4,6 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BfK_S_ApiProjekt.ViewViewModels.CreateFlashcard"
+        xmlns:converter="clr-namespace:BfK_S_ApiProjekt.Converter"
+        d:DataContext="{d:DesignInstance Type=local:CreateFlashcardViewModel}"
         mc:Ignorable="d"
         WindowStyle="None"
         SizeToContent="WidthAndHeight"
@@ -24,6 +26,12 @@
                 <Setter Property="Padding"
                         Value="3" />
             </Style>
+
+            <Style TargetType="Button"
+                   BasedOn="{StaticResource DefaultButtonStyle}"
+                   x:Key="DefaultButtonStyle" />
+
+            <converter:BoolToVisibilityCollapsedConverter x:Key="BoolToVisibilityCollapsedConverter" />
         </ResourceDictionary>
     </Window.Resources>
 
@@ -40,10 +48,28 @@
                     CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=Window}}" />
         </DockPanel>
 
-        <StackPanel Background="White"
+        <StackPanel Background="Transparent"
                     VerticalAlignment="Stretch"
                     HorizontalAlignment="Stretch">
-            <local:CreateSingleFlashcardView DataContext="{Binding CreateSingleFlashcardViewModel}" />
+            <StackPanel Orientation="Horizontal"
+                        Margin="10,0,10,0"
+                        Background="White">
+                <Button Content="Single"
+                        Style="{StaticResource DefaultButtonStyle}"
+                        Command="{Binding ShowCreateSingleFlashcardCommand}" />
+                <Button Content="Multiple"
+                        Style="{StaticResource DefaultButtonStyle}"
+                        Command="{Binding ShowCreateMultipleFlashcardsCommand}" />
+            </StackPanel>
+
+            <local:CreateSingleFlashcardView DataContext="{Binding CreateSingleFlashcardViewModel}"
+                                             Visibility="{Binding DataContext.CreateSingleFlashcardIsVisible,
+                                                    RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Window},
+                                                    Converter={StaticResource BoolToVisibilityCollapsedConverter}}" />
+
+            <local:CreateMultipleFlashcardsGeminiView DataContext="{Binding CreateMultipleFlashcardsGeminiViewModel}"
+                                                      Visibility="{Binding DataContext.CreateMultipleFlashcardsIsVisible,
+                                                            RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Window}, Converter={StaticResource BoolToVisibilityCollapsedConverter}}" />
 
         </StackPanel>
     </StackPanel>

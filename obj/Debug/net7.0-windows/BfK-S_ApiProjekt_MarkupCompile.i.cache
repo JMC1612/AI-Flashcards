@@ -16,5 +16,5 @@ C:\Users\ynayn\Documents\Schule\BfK-S\Projekte\Datenbank-Projekt\AI-Flashcards\A
 2081686961194
 MainWindow.xaml;ViewViewModels\CreateFlashcard\CreateFlashcardView.xaml;ViewViewModels\CreateFlashcard\CreateMultipleFlashcardsGeminiView.xaml;ViewViewModels\CreateFlashcard\CreateSingleFlashcardView.xaml;ViewViewModels\CreateFlashcard\CreateThemeView.xaml;ViewViewModels\Delete\DeleteFlashcardView.xaml;ViewViewModels\Delete\DeleteThemeView.xaml;ViewViewModels\Edit\EditFlashcardView.xaml;ViewViewModels\Edit\EditThemeView.xaml;ViewViewModels\FlashcardTableView.xaml;ViewViewModels\ShowFlashcardView.xaml;
 
-True
+False
 

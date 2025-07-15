@@ -25,6 +25,9 @@
                 <Setter Property="Padding"
                         Value="3" />
             </Style>
+
+            <Style TargetType="Button" x:Key="DefaultButton"
+                   BasedOn="{StaticResource DefaultButtonStyle}" />
         </ResourceDictionary>
     </Window.Resources>
 
@@ -45,13 +48,30 @@
                     Background="White"
                     VerticalAlignment="Stretch"
                     HorizontalAlignment="Stretch">
+            <StackPanel Orientation="Horizontal"
+                        Margin="10,10,10,0">
+                <TextBlock Text="Theme"
+                           VerticalAlignment="Center" />
+                <Rectangle Width="10"
+                           Height="1" />
+                <ComboBox VerticalAlignment="Center"
+                          MinWidth="300"
+                          ItemsSource="{Binding TempThemes}"
+                          DisplayMemberPath="Name"
+                          SelectedItem="{Binding TempSelectedTheme}" />
+                <Rectangle Width="10"
+                           Height="1" />
+                <Button Content="Create new Theme"
+                        Style="{StaticResource DefaultButton}"
+                        Command="{Binding CreateThemeCommand}" />
+            </StackPanel>
             <Grid Margin="10"
                   Grid.IsSharedSizeScope="True"
                   VerticalAlignment="Stretch"
                   HorizontalAlignment="Stretch">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition SharedSizeGroup="Width"
-                                      MinWidth="300" />
+                                      Width="300" />
                     <ColumnDefinition Width="10" />
                     <ColumnDefinition SharedSizeGroup="Width" />
                 </Grid.ColumnDefinitions>
@@ -71,6 +91,7 @@
                         VerticalAlignment="Stretch">
                     <TextBox VerticalAlignment="Stretch"
                              Text="{Binding TempFrontText}"
+                             TextWrapping="Wrap"
                              VerticalScrollBarVisibility="Visible" />
                 </Border>
 
@@ -83,6 +104,7 @@
                         Grid.Row="2"
                         VerticalAlignment="Stretch">
                     <TextBox VerticalAlignment="Stretch"
+                             TextWrapping="Wrap"
                              Text="{Binding TempBackText}"
                              VerticalScrollBarVisibility="Visible" />
                 </Border>

@@ -53,17 +53,19 @@ namespace BfK_S_ApiProjekt.ViewViewModels
             get => _loadedSqlData.SelectedItem;
             set
             {
-                _loadedSqlData.SelectedItem = value;
-                OnPropertyChanged(nameof(SelectedItem));
-                if (value is Theme theme)
+                if (value != null)
                 {
-                    var flashcards = SQLiteManager.LoadFlashcardsForTheme(theme.Id);
-
-                    // Das entsprechende Theme in der Liste finden und aktualisieren
-                    var targetTheme = Themes.FirstOrDefault(t => t.Id == theme.Id);
-                    if (targetTheme != null)
+                    _loadedSqlData.SelectedItem = value;
+                    OnPropertyChanged(nameof(SelectedItem));
+                    if (value is Theme theme)
                     {
-                        targetTheme.Flashcards = new ObservableCollection<Flashcard>(flashcards);
+                        var flashcards = SQLiteManager.LoadFlashcardsForTheme(theme.Id);
+
+                        var targetTheme = Themes.FirstOrDefault(t => t.Id == theme.Id);
+                        if (targetTheme != null)
+                        {
+                            targetTheme.Flashcards = new ObservableCollection<Flashcard>(flashcards);
+                        }
                     }
                 }
             }
@@ -92,7 +94,7 @@ namespace BfK_S_ApiProjekt.ViewViewModels
             {
                 var deleteThemeWindow = new DeleteThemeView()
                 {
-                    DataContext = new DeleteThemeViewModel(theme)
+                    DataContext = new DeleteThemeViewModel(theme, _loadedSqlData)
                 };
                 deleteThemeWindow.ShowDialog();
 
@@ -106,10 +108,9 @@ namespace BfK_S_ApiProjekt.ViewViewModels
             {
                 var editFlashcardWindow = new EditFlashcardView()
                 {
-                    DataContext = new EditFlashcardViewModel(flashcard)
+                    DataContext = new EditFlashcardViewModel(flashcard, _loadedSqlData)
                 };
                 editFlashcardWindow.ShowDialog();
-
             }
         }
 

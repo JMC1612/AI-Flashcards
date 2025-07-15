@@ -43,5 +43,15 @@ namespace BfK_S_ApiProjekt.Items
                 OnPropertyChanged(nameof(BackText));
             }
         }
+
+        private int themeId;
+        public int ThemeId
+        {
+            get => themeId;
+            set
+            {
+                themeId = value;
+            }
+        }
     }
 }

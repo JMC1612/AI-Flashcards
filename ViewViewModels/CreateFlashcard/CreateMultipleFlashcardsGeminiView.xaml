@@ -4,9 +4,86 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:BfK_S_ApiProjekt.ViewViewModels.CreateFlashcard"
+             d:DataContext="{d:DesignInstance Type=local:CreateMultipleFlashcardsGeminiViewModel}"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-            
-    </Grid>
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Button"
+                   BasedOn="{StaticResource DefaultButtonStyle}" />
+
+            <Style TargetType="Button"
+                   x:Key="CreateButtonStyle"
+                   BasedOn="{StaticResource DefaultButtonStyle}">
+                <Setter Property="Background"
+                        Value="Transparent" />
+                <Setter Property="Margin"
+                        Value="10" />
+                <Setter Property="BorderBrush"
+                        Value="White" />
+                <Setter Property="Padding"
+                        Value="3" />
+            </Style>
+
+            <Style TargetType="ComboBox"
+                   BasedOn="{StaticResource DefaultComboBoxStyle}" />
+
+            <Style TargetType="TextBox"
+                   BasedOn="{StaticResource DefaultTextBoxStyle}" />
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <StackPanel Background="#555555">
+        <StackPanel Margin="10,0"
+                    Background="White"
+                    VerticalAlignment="Stretch"
+                    HorizontalAlignment="Stretch">
+            <Grid Margin="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="10" />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="10" />
+                    <ColumnDefinition Width="auto" />
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+
+                <TextBlock Text="Theme"
+                           VerticalAlignment="Center" />
+                <ComboBox Grid.Column="2"
+                          VerticalAlignment="Center"
+                          MinWidth="300"
+                          ItemsSource="{Binding Themes}"
+                          DisplayMemberPath="Name"
+                          SelectedItem="{Binding SelectedTheme}" />
+                <Button Grid.Column="4"
+                        Content="Create new Theme"
+                        Command="{Binding CreateThemeCommand}" />
+
+                <TextBlock Grid.Row="2"
+                           Text="Count"
+                           VerticalAlignment="Center" />
+
+                <TextBox Grid.Row="2"
+                         Grid.Column="2"
+                         VerticalAlignment="Center"
+                         MinWidth="300"
+                         Text="{Binding FlashcardsCount}" />
+            </Grid>
+        </StackPanel>
+
+        <DockPanel>
+            <Button Content="Create"
+                    MinWidth="70"
+                    Command="{Binding CreateFlashcardsCommand}"
+                    CommandParameter="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Window}}"
+                    HorizontalAlignment="Right"
+                    Style="{StaticResource CreateButtonStyle}" />
+        </DockPanel>
+    </StackPanel>
 </UserControl>

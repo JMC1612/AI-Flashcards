@@ -102,7 +102,6 @@ namespace BfK_S_ApiProjekt.ViewViewModels.CreateFlashcard
 
                 var flashcards = SQLiteManager.LoadFlashcardsForTheme(SelectedTheme.Id);
 
-                // Das entsprechende Theme in der Liste finden und aktualisieren
                 var targetTheme = Themes.FirstOrDefault(t => t.Id == SelectedTheme.Id);
                 if (targetTheme != null)
                 {
@@ -120,8 +119,9 @@ namespace BfK_S_ApiProjekt.ViewViewModels.CreateFlashcard
             {
                 Task.Run(async () =>
                 {
-                    Flashcard generatedFlashcard = await Gemini.GenerateFlashcardFromQuestion(TempFrontText);
-                    TempBackText = generatedFlashcard.BackText;
+                    Flashcard generatedFlashcard = await Gemini.GenerateFlashcardFromQuestion(TempFrontText, SelectedTheme.Name);
+                    if (generatedFlashcard != null)
+                        TempBackText = generatedFlashcard.BackText;
                 });
             }
         }

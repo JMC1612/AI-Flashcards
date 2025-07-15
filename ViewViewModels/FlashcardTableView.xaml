@@ -27,9 +27,11 @@
                   CanUserAddRows="False"
                   SelectionMode="Single"
                   SelectionUnit="FullRow"
+                  HeadersVisibility="None"
                   Margin="10"
                   Height="300"
-                  VerticalScrollBarVisibility="Visible">
+                  VerticalScrollBarVisibility="Visible"
+                  VirtualizingPanel.ScrollUnit="Pixel">
             <DataGrid.RowStyle>
                 <Style TargetType="DataGridRow">
                     <Setter Property="Background"
@@ -48,8 +50,7 @@
 
             <DataGrid.Columns>
                 <DataGridTextColumn  Binding="{Binding Name}"
-                                     Width="auto"
-                                     MinWidth="300"
+                                     Width="500"
                                      IsReadOnly="True" />
 
                 <DataGridTemplateColumn  Width="auto">

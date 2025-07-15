@@ -14,7 +14,7 @@ namespace BfK_S_ApiProjekt
 {
     public class Gemini
     {
-        public static async Task<Flashcard?> GenerateFlashcardFromQuestion(string frontText)
+        public static async Task<Flashcard?> GenerateFlashcardFromQuestion(string frontText, string themeName)
         {
             var url = $"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={App.ApiKey}";
 
@@ -30,8 +30,9 @@ namespace BfK_S_ApiProjekt
                     {
                         text = $@"Beantworte die folgende Frage möglichst präzise und informativ.
 
-                        Gib ausschließlich die Antwort zurück – kein Format, keine Wiederholung der Frage, keine Einleitung.
-
+                        Gib ausschließlich die Antwort zurück – kein Format, keine Wiederholung der Frage, keine Einleitung. Keine explizite referenz das Thema.
+                        
+                        Thema: ""{themeName}""
                         Frage: ""{frontText}"""
                     }
                 }
@@ -72,7 +73,7 @@ namespace BfK_S_ApiProjekt
 
 
 
-        public static async Task AiGenerateFlashcardsToTheme(int ammount, string thema)
+        public static async Task<ObservableCollection<Flashcard>> AiGenerateFlashcardsToTheme(int ammount, string thema)
         {
             var url = $"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={App.ApiKey}";
             Debug.WriteLine(url);
@@ -112,11 +113,12 @@ namespace BfK_S_ApiProjekt
 
                 string geminiTxt = Convert.ToString(responseJsonDocument.RootElement.GetProperty("candidates")[0].GetProperty("content").GetProperty("parts")[0].GetProperty("text"));
 
-                GenerateGeminiFlashcards(geminiTxt);
+                return GenerateGeminiFlashcards(geminiTxt);
             }
             else
             {
                 Debug.WriteLine($"Fehler: {response.StatusCode} | " + await response.Content.ReadAsStringAsync());
+                return null;
             }
         }
 
